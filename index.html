@@ -62,7 +62,8 @@
   <div class="block">
 
     <p>
-    The introduction to AstroML </p>
+    </p>
+<h2> An introduction to AstroML </h2> 
 
     <p>
 
@@ -75,13 +76,14 @@
 
 
     <p>The objective of this course is to provide a hands-on
-    introduction that uses Python and astronomical data sets to
-    illustrate all of the examples and figures. The lectures will be
-    presented as iPython notebooks that can be downloaded and either
-    viewed or executed as part of the class. To access the note books
-    simply go to the link at the top of the page. From these pages
-    (displayed as a blog) you will be able to access the iPython
-    source or submit comments and questions on the text.
+    introduction to machine learning that uses Python and astronomical
+    data sets to illustrate the techniques. All figures and examples
+    in the class will be available for download. The lectures will be
+    presented as iPython notebooks that can be either viewed on a
+    browser or executed as part of the class (as well as being
+    available for downloading). To access the notebooks simply go to
+    the link at the top of the page. From these pages you will be able
+    to access the iPython source or submit comments and questions.
     </p>
 
   </div>
@@ -94,32 +96,35 @@
   <div class="block">
     <h2>Schedule</h2>
 
-    <p> Each class will be based on an iPython notebook which will
-    download and install the required data sets. Some of these data
-    sets are quite large so it is encouraged that you try out the
-    python note book ahead of time. Instructions for installing the
-    notebooks, the associated software (e.g. astroML) etc are given in
-    the Installation link at the top.  </p>
+    <p> For each class the notes will be provide in the form of
+    iPython notebooks, which will download and install the required
+    data sets as well as executing the machine learning
+    applications. Some of these data sets are quite large so it is
+    encouraged that you try out the python notebook ahead of time (as
+    the data are cached locally to your machine the first time the
+    notebook is run). Instructions for installing iPython and the
+    associated software (e.g. astroML etc)  are given in the
+    installation link at the top.  </p>
 
 <p> The following is a draft of the schedule; there will likely be
-    modifications depending on how much we cover in the class and
-    interest in diving into different topics </p>
+    modifications depending on how quickly we cover topics in the
+    class, and interest in diving into different machine learning
+    techniques </p>
 
     <h4>Tuesday, April 28th</h4>
 
+    <h4>  Classifying your data and understanding how successful you were </h4>
 
-
- Classifying your data and understanding how successful you were
- <ul>
+    <ul>
         <li>Generative and discriminative classification </li>
         <li>Naive Bayesian Classification </li>
         <li>Separating classes and SVM</li>
         <li>Decision trees and random forests</li>
 	<li>How well did your classifier work?</li>
-      </ul>
+     </ul>
 
-How to fit models to data (including data with errors)
-<ul>
+     <h4> How to fit models to data (including data with errors) </h4>
+     <ul>
         <li>A Bayesian approach to regression </li>
         <li>Basis function regression </li>
         <li>Separating classes and SVM</li>
@@ -128,16 +133,16 @@ How to fit models to data (including data with errors)
 	<li> Regression for data with uncertainties on both dimensions</li>
       </ul>
 
-Reducing high dimensional data to the most significant directions
-<ul>
+      <h4>Reducing high dimensional data to the most significant directions </h4>
+      <ul>
         <li>The curse of dimensionality </li>
         <li>Principal component analysis</li>
         <li>Dealing with gaps and noise in the data</li>
         <li>Manifold learning and going beyond PCA</li>
       </ul>
 
-Variable sources and how to analyze time series data
-<ul>
+      <h4> Variable sources and how to analyze time series data </h4>
+      <ul>  
         <li>Filtering data </li>
         <li>Analyzing periodic signals</li>
         <li>Lomb-Scargle periodogram</li>
@@ -155,11 +160,6 @@ Variable sources and how to analyze time series data
   <div class="block">
 
 <h1>Setting Up Your Computer</h1>
-
-<p><i>One option for this class is to sign-up and use
-<a href="http://wakari.io">Wakari</a>, a browser-based Python cloud-computing
-interface, rather than your own computer.  It contains all the tools we'll
-need for the course.</i></p>
 
 <div class="columns">
   <div class="box column" id="setup">
@@ -204,7 +204,7 @@ need for the course.</i></p>
 <a href="http://scikit-learn.org">Scikit-learn</a> version 0.12+:
 	machine learning</li>
       <li>
-<a href="http://nose.readthedocs.org/">Nose</a>: unit testing</li>
+<a href="http://astroML.org/">astroML</a>: an astronomical machine learning toolkit</li>
     </ul>
     <h3>Installation</h3>
     <p>For installation from-scratch, I highly recommend the
@@ -214,9 +214,8 @@ need for the course.</i></p>
       </p>
 <ol>
 	<li>Download and install Anaconda on your system, by going to the
-	  above link, downloading the appropriate package, and then typing
-	  <pre>[~]$ bash Anaconda-1.x.x-Linux-x86.sh</pre>
-	  (substitude the package you downloaded above).
+	  above link, downloading the appropriate package. For Mac OSX
+	  you can download the dmg and follow the instructions <a href="http://docs.continuum.io/anaconda/install.html#mac-install">here</a>
 	</li>
 	<li>
 <b>Open a new terminal window</b>, and make sure your $PATH
@@ -246,7 +245,20 @@ need for the course.</i></p>
       installing Anaconda for this course.  It will make your life a lot
       easier.</p>
   </div>
-  <div class="box column" id="setup">
+
+<div class="box column" id="setup">
+    <h2>Installing astroML</h2>
+    <p> the astroML packages and add-ons can be installed using <i>pip</i>
+         </p>
+<pre>[~]$ pip install astroML</pre>
+	then
+         <pre>[~]$ pip install astroML_addons</pre>
+
+	 the most uptodate code can be downloaded from <a href="http://github.com/astroML/astroML">Githib</a> and by following these <a href="http://www.astroml.org/user_guide/installation.html">instructions</a>
+	   </div>
+
+
+<div class="box column" id="setup">
     <h2>Installing Git</h2>
     <p><a href="http://git-scm.com/">Git</a> can be installed rather easily
       on OSX or linux.  Detailed instructions can be found
@@ -268,25 +280,9 @@ need for the course.</i></p>
       <pre>[~]$ sudo port install git-core</pre>
       
 
-      <h3>Windows</h3>
-      <p>Git can be installed on windows using the tools at
-	<a href="http://msysgit.github.com/">http://msysgit.github.com/</a>.
-	Make sure to get the command-line interface as well as the GUI
-	interface.</p>
   </div>
-  <div class="box column" id="setup">
-    <h2>Downloading the Course Material</h2>
-    <p>When you're finished installing Git, you can download all the course
-      material (including the HTML source of this web page) by typing
-      </p>
-<pre>[~]$ git clone  https://github.com/jakevdp/2013_fall_ASTR599.git</pre>
-      This will create a new folder and download all the course material.
-      If you ever would like to update the files in this folder, simply
-      type
-      <pre>[~]$ cd /path/to/2013_fall_ASTR599<br>[~]$ git pull</pre>
-      We will introduce the Git workflow more completely during the 
-      bootcamp.
-  </div>
+
+
 </div>
 </div>
 </section>
