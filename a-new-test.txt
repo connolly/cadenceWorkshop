@@ -1,0 +1,10 @@
+.. title: A new test
+.. slug: a-new-test
+.. date: 2015-03-23 12:37:10 UTC
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+
+Write your page here.

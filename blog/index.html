@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A set of lectures introducing AstroML">
+    <meta name="viewport" content="width=device-width">
+    <title>Introduction to AstroML | Introduction to AstroML</title>
+
+                <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+
+                <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+
+      <link rel="canonical" href="http://connolly.github.io/introAstroML/blog/index.html">
+
+
+
+    
+        <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]-->
+
+    
+
+
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://connolly.github.io/introAstroML/">
+
+                <span id="blog-title">Introduction to AstroML</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                                <li>
+<a href=".">Blog</a>
+
+                
+            </li>
+</ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                
+            </ul>
+        </div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav>
+
+<!-- End of Menubar -->
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+<div class="postindex">
+    <article class="h-entry post-text">
+    <header>
+        <h1 class="p-name entry-title"><a href="multi-output-random-forests.html" class="u-url">Multi-Output Random Forests</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Jake VanderPlas</span></p>
+            <p class="dateline"><a href="multi-output-random-forests.html" rel="bookmark"><time class="published dt-published" datetime="2014-09-20T11:30:00-07:00" itemprop="datePublished" title="Publication date">2014-09-20 11:30</time></a></p>
+                <p class="commentline">            <a href="multi-output-random-forests.html#disqus_thread" data-disqus-identifier="cache/posts/multi-output-random-forests.html">Comments</a>
+
+
+        </p>
+</div>
+    </header>
+    <div class="p-summary entry-summary">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Classic machine learning algorithms map multiple inputs to a single output.
+For example, you might have five photometric observations of a galaxy, and predict a single attribute or label (like the redshift, metallicity, etc.)
+When multiple ouputs are desired, standard practice is to essentially run two independent classifications: first predict one variable, then the next.
+The problem with this approach is that it completely ignores <em>correlations</em> in the outputs.</p>
+<p>This is my Thursday hack, which was to explore ideas to improve on this within Random Forests.</p>
+<p class="more"><a href="multi-output-random-forests.html">Read more…</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </div>
+    </article>
+    <article class="h-entry post-text">
+    <header>
+        <h1 class="p-name entry-title"><a href="histograms.html" class="u-url">Histograms</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Andy Connolly</span></p>
+            <p class="dateline"><a href="histograms.html" rel="bookmark"><time class="published dt-published" datetime="2014-09-20T11:30:00-07:00" itemprop="datePublished" title="Publication date">2014-09-20 11:30</time></a></p>
+                <p class="commentline">            <a href="histograms.html#disqus_thread" data-disqus-identifier="cache/posts/Histograms.html">Comments</a>
+
+
+        </p>
+</div>
+    </header>
+    <div class="p-summary entry-summary">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Practical Bayesian applications: Histograms</strong></p>
+<p>How many bins? Though it is typically not necessary to bin the data before estimating
+model parameters.</p>
+<p><em>Scott's rule</em> suggests a bin width</p>
+<p>$\Delta_b = {3.5 \sigma \over N^{1/3}}$</p>
+<p>with $\sigma$ is the sample standard deviation, and $N$ is the sample size. This minimizes the mean integrated square error (assumes distribution is Gaussian)</p>
+<p><em>Freedman--Diaconis rule</em> generalizes this to non-Gaussian distributions</p>
+<p>$\Delta_b = {2 (q_{75}-q_{25}) \over N^{1/3}} =  {2.7 \sigma_G \over N^{1/3}}$</p>
+<p>which estimates the scale of the distribution from its interquartile range</p>
+<p>For a Gaussian distribution, Scott's bin width is 30% larger than the Freedman-Diaconis</p>
+<p>Excel (should you choose to use it) assumes $\Delta_b = N^{1/2}$</p>
+<p><em>Bayesian approaches</em></p>
+<p>We can think of a histogram as a piecewise constant fit to the data</p>
+<p>Knuth showed (from Bayesian model selection) the best piecewise constant model has the number of bins, $M$, which maximizes</p>
+<p>$F(M|{x_i},I)) = N \, \log M + \log\left[\Gamma\left({M\over 2}\right)\right]
+                    -M\log\left[\Gamma\left({1\over 2}\right)\right]  \
+                    -\log\left[\Gamma\left(N+{M\over 2}\right)\right]</p>
+
+<pre><code>                + \sum_{k=1}^M  \log\left[\Gamma\left(n_k+{1 \over 2}\right)\right]$
+
+</code></pre>
+<p>$\Gamma$ is the gamma function, and $n_k$ is the number of measurements found in bin $k$</p>
+<p>For bin sizes that are not fixed we can extend Knuth's approach and  segmented the data into <em>blocks</em>.
+The borders between two blocks being set by a series of changepoints.  The log-likelihood  function,
+can be defined for each block:</p>
+<p>$F(N_i, T_i) = N_i(\log N_i - \log T_i)$</p>
+<p>with $N_i$ is the number of points in block $i$, and $T_i$ is the width
+of block $i$.  For any set of blocks we  sum the log likelihoods.</p>
+<p class="more"><a href="histograms.html">Read more…</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </div>
+    </article>
+</div>
+
+               <script>var disqus_shortname="astroML";(function(){var a=document.createElement("script");a.async=true;a.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+
+
+        </div>
+        <!--End of body content-->
+
+        <footer>
+            Contents © 2015         <a href="mailto:ajc@astro.washington.edu"></a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+    </div>
+</div>
+
+            <script src="../assets/js/all-nocdn.js"></script>
+    
+<!-- Social buttons -->
+<div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul>
+<li>
+<a class="addthis_button_facebook"></a>
+</li>
+<li>
+<a class="addthis_button_google_plusone_share"></a>
+</li>
+<li>
+<a class="addthis_button_linkedin"></a>
+</li>
+<li>
+<a class="addthis_button_twitter"></a>
+</li>
+</ul>
+</div>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
+<!-- End of social buttons -->
+
+
+    <script>$('a.image-reference:not(.islink)').colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+    <!-- fancy dates -->
+    <script>
+    moment.locale("");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script>
+    <!-- end fancy dates -->
+
+
+</body>
+</html>

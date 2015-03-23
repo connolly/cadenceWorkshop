@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Introduction to AstroML (machine learning)</title><link>http://connolly.github.io/introAstroML/</link><description></description><atom:link href="http://connolly.github.io/introAstroML/categories/machine-learning.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 23 Mar 2015 15:22:37 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Histograms</title><link>http://connolly.github.io/introAstroML/blog/histograms.html</link><dc:creator>Andy Connolly</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;strong&gt;Practical Bayesian applications: Histograms&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;How many bins? Though it is typically not necessary to bin the data before estimating
+model parameters.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Scott's rule&lt;/em&gt; suggests a bin width&lt;/p&gt;
+&lt;p&gt;$\Delta_b = {3.5 \sigma \over N^{1/3}}$&lt;/p&gt;
+&lt;p&gt;with $\sigma$ is the sample standard deviation, and $N$ is the sample size. This minimizes the mean integrated square error (assumes distribution is Gaussian)&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Freedman--Diaconis rule&lt;/em&gt; generalizes this to non-Gaussian distributions&lt;/p&gt;
+&lt;p&gt;$\Delta_b = {2 (q_{75}-q_{25}) \over N^{1/3}} =  {2.7 \sigma_G \over N^{1/3}}$&lt;/p&gt;
+&lt;p&gt;which estimates the scale of the distribution from its interquartile range&lt;/p&gt;
+&lt;p&gt;For a Gaussian distribution, Scott's bin width is 30% larger than the Freedman-Diaconis&lt;/p&gt;
+&lt;p&gt;Excel (should you choose to use it) assumes $\Delta_b = N^{1/2}$&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Bayesian approaches&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;We can think of a histogram as a piecewise constant fit to the data&lt;/p&gt;
+&lt;p&gt;Knuth showed (from Bayesian model selection) the best piecewise constant model has the number of bins, $M$, which maximizes&lt;/p&gt;
+&lt;p&gt;$F(M|{x_i},I)) = N \, \log M + \log\left[\Gamma\left({M\over 2}\right)\right]
+                    -M\log\left[\Gamma\left({1\over 2}\right)\right]  \
+                    -\log\left[\Gamma\left(N+{M\over 2}\right)\right]&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;                + \sum_{k=1}^M  \log\left[\Gamma\left(n_k+{1 \over 2}\right)\right]$
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;$\Gamma$ is the gamma function, and $n_k$ is the number of measurements found in bin $k$&lt;/p&gt;
+&lt;p&gt;For bin sizes that are not fixed we can extend Knuth's approach and  segmented the data into &lt;em&gt;blocks&lt;/em&gt;.
+The borders between two blocks being set by a series of changepoints.  The log-likelihood  function,
+can be defined for each block:&lt;/p&gt;
+&lt;p&gt;$F(N_i, T_i) = N_i(\log N_i - \log T_i)$&lt;/p&gt;
+&lt;p&gt;with $N_i$ is the number of points in block $i$, and $T_i$ is the width
+of block $i$.  For any set of blocks we  sum the log likelihoods.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://connolly.github.io/introAstroML/blog/histograms.html"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>histograms</category><category>machine learning</category><category>python</category><guid>http://connolly.github.io/introAstroML/blog/histograms.html</guid><pubDate>Sat, 20 Sep 2014 18:30:00 GMT</pubDate></item><item><title>Multi-Output Random Forests</title><link>http://connolly.github.io/introAstroML/blog/multi-output-random-forests.html</link><dc:creator>Jake VanderPlas</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Classic machine learning algorithms map multiple inputs to a single output.
+For example, you might have five photometric observations of a galaxy, and predict a single attribute or label (like the redshift, metallicity, etc.)
+When multiple ouputs are desired, standard practice is to essentially run two independent classifications: first predict one variable, then the next.
+The problem with this approach is that it completely ignores &lt;em&gt;correlations&lt;/em&gt; in the outputs.&lt;/p&gt;
+&lt;p&gt;This is my Thursday hack, which was to explore ideas to improve on this within Random Forests.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://connolly.github.io/introAstroML/blog/multi-output-random-forests.html"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>hacking</category><category>machine learning</category><category>python</category><category>random forests</category><guid>http://connolly.github.io/introAstroML/blog/multi-output-random-forests.html</guid><pubDate>Sat, 20 Sep 2014 18:30:00 GMT</pubDate></item></channel></rss>
