@@ -6,19 +6,27 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://connolly.github.io/introAstroML/2014/index.html</loc>
-  <lastmod>2015-03-24</lastmod>
+  <lastmod>2015-03-25</lastmod>
+ </url>
+ <url>
+  <loc>http://connolly.github.io/introAstroML/2015/index.html</loc>
+  <lastmod>2015-03-25</lastmod>
  </url>
  <url>
   <loc>http://connolly.github.io/introAstroML/archive.html</loc>
-  <lastmod>2015-03-24</lastmod>
+  <lastmod>2015-03-25</lastmod>
  </url>
  <url>
   <loc>http://connolly.github.io/introAstroML/blog/histograms.html</loc>
-  <lastmod>2015-03-24</lastmod>
+  <lastmod>2015-03-25</lastmod>
  </url>
  <url>
   <loc>http://connolly.github.io/introAstroML/blog/index.html</loc>
-  <lastmod>2015-03-24</lastmod>
+  <lastmod>2015-03-25</lastmod>
+ </url>
+ <url>
+  <loc>http://connolly.github.io/introAstroML/blog/instructions-for-getting-the-notebooks.html</loc>
+  <lastmod>2015-03-25</lastmod>
  </url>
  <url>
   <loc>http://connolly.github.io/introAstroML/categories/histograms.html</loc>
@@ -42,7 +50,7 @@
  </url>
  <url>
   <loc>http://connolly.github.io/introAstroML/index.html</loc>
-  <lastmod>2015-03-24</lastmod>
+  <lastmod>2015-03-25</lastmod>
  </url>
  <url>
   <loc>http://connolly.github.io/introAstroML/listings/index.html</loc>

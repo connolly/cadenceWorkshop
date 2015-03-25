@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Introduction to AstroML</title><link>http://connolly.github.io/introAstroML/</link><description>A set of lectures introducing AstroML</description><atom:link href="http://connolly.github.io/introAstroML/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Tue, 24 Mar 2015 12:00:36 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Histograms</title><link>http://connolly.github.io/introAstroML/blog/histograms.html</link><dc:creator>Andy Connolly</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Introduction to AstroML</title><link>http://connolly.github.io/introAstroML/</link><description>A set of lectures introducing AstroML</description><atom:link href="http://connolly.github.io/introAstroML/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 25 Mar 2015 10:51:11 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Instructions for getting the notebooks</title><link>http://connolly.github.io/introAstroML/blog/instructions-for-getting-the-notebooks.html</link><dc:creator>Andy Connolly</dc:creator><description>&lt;div&gt;&lt;p&gt;Each post here is an ipython notebook. To view the notebook with the
+code and figures simply click on &lt;em&gt;"Read more..."&lt;/em&gt;. To download the
+notebook on your machine, click on &lt;em&gt;"Read more..."&lt;/em&gt;, click on &lt;em&gt;Source&lt;/em&gt;
+(in the top right corner) and download the notebook to your
+harddrive. To run the notebook (assuming you have followed the
+&lt;a href="http://connolly.github.io/introAstroML/blog/instructions-for-getting-the-notebooks.html#id1"&gt;&lt;span class="problematic" id="id2"&gt;instructions_&lt;/span&gt;&lt;/a&gt;) simply type in the directory where you saved the notebook,
+like
+.. _instructions: &lt;a class="reference external" href="http://connolly.github.io/introAstroML/#instructions"&gt;http://connolly.github.io/introAstroML/#instructions&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+ipython notebook [notebook name.ipynb]&lt;/blockquote&gt;
+&lt;p&gt;and a page will come up in your browser with the notebook&lt;/p&gt;
+&lt;p&gt;shift-return in each cell in the notebook will execute the code.&lt;/p&gt;
+&lt;div class="system-messages section"&gt;
+&lt;h2&gt;Docutils System Messages&lt;/h2&gt;
+&lt;div class="system-message" id="id1"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 1); &lt;em&gt;&lt;a href="http://connolly.github.io/introAstroML/blog/instructions-for-getting-the-notebooks.html#id2"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Unknown target name: "instructions".&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>http://connolly.github.io/introAstroML/blog/instructions-for-getting-the-notebooks.html</guid><pubDate>Wed, 25 Mar 2015 10:37:56 GMT</pubDate></item><item><title>Histograms</title><link>http://connolly.github.io/introAstroML/blog/histograms.html</link><dc:creator>Andy Connolly</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
