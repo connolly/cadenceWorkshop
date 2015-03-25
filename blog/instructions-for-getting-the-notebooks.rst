@@ -12,8 +12,7 @@ code and figures simply click on *"Read more..."*. To download the
 notebook on your machine, click on *"Read more..."*, click on *Source*
 (in the top right corner) and download the notebook to your
 harddrive. To run the notebook (assuming you have followed the
-instructions_) simply type in the directory where you saved the notebook,
-like
+instructions_) 
 _instructions: http://connolly.github.io/introAstroML/#instructions
 
   ipython notebook [notebook name.ipynb]
