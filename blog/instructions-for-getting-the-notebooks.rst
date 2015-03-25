@@ -14,7 +14,7 @@ notebook on your machine, click on *"Read more..."*, click on *Source*
 harddrive. To run the notebook (assuming you have followed the
 instructions_) simply type in the directory where you saved the notebook,
 like
-.. _instructions: http://connolly.github.io/introAstroML/#instructions
+_instructions: http://connolly.github.io/introAstroML/#instructions
 
   ipython notebook [notebook name.ipynb]
 
