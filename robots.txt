@@ -1,2 +1,2 @@
-Sitemap: http://connolly.github.io/introAstroML/sitemapindex.xml
+Sitemap: http://connolly.github.io/cadenceWorkshop/sitemapindex.xml
 

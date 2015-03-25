@@ -54,22 +54,22 @@ section{
 }
 
 section#top{
-    background-image: url(../images/cambridge.jpg);
+    background-image: url(../images/LSST-site.jpg);
 }
 
 section#top h1{
-    font-weight: 100;
+    font-weight: 500;
     font-size: 3em;
-    color: #dddddd;
+    color: ##000000;
     letter-spacing: 0;
     margin: 1em 0;
     text-align: center;
 }
 
 section#top h2{
-    font-weight: 100;
+    font-weight: 500;
     font-size: 2em;
-    color: #dddddd;
+    color: ##000000;
     letter-spacing: 0;
     margin: 1em 0;
     text-align: center;
@@ -130,6 +130,14 @@ section#ioa{
     background-image: url(../images/IoA-Cambridge.jpg);
 }
 
+section#lsst{
+    background-image: url(../images/LSST-site.jpg);
+}
+
+section#lsst-logo{
+    background-image: url(../images/lsst.jpg);
+}
+
 section#ioa-night{
     background-image: url(../images/IoA-night.jpg);
 }
@@ -140,7 +148,7 @@ section#cambridge-kings{
 
 
 section#uwcampus{
-    background-image: url(../images/UW-dark.jpg);
+    background-image: url(../images/UW-<.jpg);
     padding-top: 2em;
     padding-bottom: 2em;
 }

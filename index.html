@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-  <title>Introduction to AstroML</title>
+  <title>LSST UK Cadence Workshop</title>
   <meta name="description" content="AstroML Cambridge">
   <meta name="author" content="ajc">
 
@@ -28,18 +28,18 @@
                 HOME
             </a>
         </li>   <li>
-            <a title="Notebooks" class="button notebooks" href="blog/">
-                NOTEBOOKS
+            <a title="Cadence Information" class="button cadence" href="blog/">
+                CADENCE
             </a>
         </li>
 	<li>
-            <a title="Schedule" class="button schedule" href="#schedule">
-                SCHEDULE
+            <a title="Agenda" class="button agenda" href="#agenda">
+                AGENDA
             </a>
         </li>
 	 <li>
-            <a title="Installation" class="button installation" href="#instructions">
-                INSTALLATION
+            <a title="Logistics" class="button logistics" href="#logistics">
+                LOGISTICS
             </a>
         </li>
 	<li>
@@ -52,8 +52,8 @@
         
 <section id="top">
   <a name="home"></a>
-  <h1> AstroML Cambridge</h1>
-  <h2>April 28 - May 18th 2015</h2>
+  <h1> LSST UK Cadence Workshop</h1>
+  <h2>May 18 - May 20th 2015</h2>
 </section>
 
 
@@ -63,28 +63,12 @@
 
     <p>
     </p>
-<h2> An introduction to AstroML </h2> 
+<h2> LSST Cadence Workshop </h2> 
 
-    <p>
+    
+  <p> The science of the LSST will, in part, be driven by how it observes the sky (the footprint and cadence of the survey). The objectives of this meeting are to train  astronomers in the tools available to simulate the properties of the LSST; to revisit the  science drivers for various LSST programs with an eye towards optimization of the baseline observing cadence; and the development of metrics that might be used to quantify the science performance of the LSST as a function of its cadence. Examples where further cadence optimization is likely to yield tangible improvements in the LSST science include the coverage of the Galactic plane, characterization of supernovae light curves, the reduction of systematics through dithering, deep drilling fields, and active area vs. sampling rate tradeoffs (also known as “rolling cadence”). </p>
 
-    This course will provide a quick fire introduction to a number of
-    machine learning techniques used in astrophysics. We will make use
-    of the textbook <a href="http://press.princeton.edu/titles/10159.html"><i>Statistics,
-    Data Mining, and Machine Learning in Astronomy</i></a> by Ivezić,
-    Connolly, VanderPlas, and Gray. It is not required that you have a copy, but I
-    encourage you to bring a copy if you have it (there is one in the IoA library)  </p>
-
-
-    <p>The objective of this course is to provide a hands-on
-    introduction to machine learning that uses Python and astronomical
-    data sets to illustrate the techniques. All figures and examples
-    in the class will be available for download. The lectures will be
-    presented as iPython notebooks that can be either viewed on a
-    browser or executed as part of the class (as well as being
-    available for downloading). To access the notebooks simply go to
-    the link at the top of the page. From these pages you will be able
-    to access the iPython source or submit comments and questions.
-    </p>
+  <p>This workshop will include an introduction to the cadence issues for the LSST, a set of tutorials that will train people in how to use the LSST tools, and a series of breakout or hack sessions where the impact of cadence on the science will be discussed (including summarizing the current understanding of  various cadence issues and identifying a roadmap to address these issues in a quantitative manner). </p>
 
   </div>
 </section>
@@ -92,199 +76,84 @@
 <section id="ioa"></section>
 
 <section class="text">
-  <a name="schedule"></a>
+  <a name="agenda"></a>
   <div class="block">
-    <h2>Schedule</h2>
+    <h2>Agenda</h2>
 
-    <p> For each class the notes will be provide in the form of
-    iPython notebooks, which will download and install the required
-    data sets as well as executing the machine learning
-    applications. Some of these data sets are quite large so it is
-    encouraged that you try out the python notebook ahead of time (as
-    the data are cached locally to your machine the first time the
-    notebook is run). Instructions for installing iPython and the
-    associated software (e.g. astroML etc)  are given in the
-    installation link at the top.  </p>
-
+    
 <p> The following is a draft of the schedule; there will likely be
     modifications depending on how quickly we cover topics in the
     class, and interest in diving into different machine learning
     techniques </p>
 
-    <h4>Tuesday, April 28th</h4>
+<h3>Monday 18th May (Ryle Lecture theatre):</h3>
+<ul>
+<li>1:00 - 1.30pm   Introduction, logistics, objectives of the meeting</li>
+<li>1.30 - 2.30pm   The LSST and defining an objective cadence</li>
+<li>2.30 - 3.30pm   LSST simulation tools: operations, catalog and image simulators</li>
+<li>3.30 - 4.00pm   Coffee </li>
+<li>4.00 - 5.30pm   The analysis framework for the LSST cadences (tutorial 1)</li>
+</ul>
 
-    <h4>  Classifying your data and understanding how successful you were </h4>
+<h3>Tuesday (Ryle, Hoyle, Observatory)</h3>
+<ul>
+<li>9.00 - 10.30am  The analysis framework for the LSST cadences (tutorial 2)</li>
+<li>10.30 - 11.00am Coffee</li>
+<li>11.00 - 12.30pm WG hack sessions (see below)</li>
+<li>12.30 - 1.30pm  Lunch</li>
+<li>1.30 - 3.30pm   WG hack sessions (see below)</li>
+<li>3.30 - 4.00pm   Coffee
+</li>
+<li>4.00 - 5.30pm   WG hack sessions (see below)</li>
+<li>6.30pm    Dinner at Clare Hall </li>
+</ul>  
 
-    <ul>
-        <li>Generative and discriminative classification </li>
-        <li>Naive Bayesian Classification </li>
-        <li>Separating classes and SVM</li>
-        <li>Decision trees and random forests</li>
-	<li>How well did your classifier work?</li>
-     </ul>
-
-    <h4>Tuesday, May 5th</h4>
-     <h4> How to fit models to data (including data with errors) </h4>
-     <ul>
-        <li>A Bayesian approach to regression </li>
-        <li>Basis function regression </li>
-        <li>Regularization and the problem of over fitting</li>
-	<li>Robust regression</li>
-	<li>Regression for data with uncertainties on both dimensions</li>
-      </ul>
-
-    <h4>Tuesday, May 12th</h4>
-      <h4>Reducing high dimensional data to the most significant directions </h4>
-      <ul>
-        <li>The curse of dimensionality </li>
-        <li>Principal component analysis</li>
-        <li>Dealing with gaps and noise in the data</li>
-        <li>Manifold learning and going beyond PCA</li>
-      </ul>
-
-    <h4>Tuesday, May 19th</h4>
-      <h4> Variable sources and how to analyze time series data </h4>
-      <ul>  
-        <li>Filtering data </li>
-        <li>Analyzing periodic signals</li>
-        <li>Lomb-Scargle periodogram</li>
-        <li>Searching for events in a time series</li>
-      </ul>
-
+<h3>Wednesday (Ryle, Hoyle, Observatory)</h3>
+<ul>
+<li>9.00 - 10.30am  WG hack sessions (see below)</li>
+<li>10.30 - 11.00am Coffee</li>
+<li>11.00 - 12.30pm WG hack sessions (see below)</li>
+<li>12.30 - 1.30pm  Lunch</li>
+<li>1.30 - 3.30pm   Presentation of cadence results - next steps</li>
+<li>3.30 - 4.00pm   Coffee and end (Please see note re Martin Ryle room below)</li>
+</ul>
   </div>
 
 </section>
 
-<section id="cambridge-kings"></section>
+<section id="lsst-logo"></section>
 
 <section class="text">
-  <a name="instructions"></a>
+  <a name="logistics"></a>
   <div class="block">
 
-<h2>Setting Up Your Computer</h2>
+<h2>Logistics</h2>
 
 <div class="columns">
   <div class="box column" id="setup">
-    <p>It is important that each student has a laptop or other computer to
-      use during the course.  Though it is possible to use a Windows machine,
-      a Unix-based architecture (such as Mac OSX or Linux) will make your
-      life much easier, both for this course and in the long run.</p>
-    <p>There are two primary software requirements for this course:
-      <b>Python</b> and <b>Git</b>, which is a very useful version control
-      system.  Details on installation can be found below.</p>
-
-      <p>Another possibility is to do all work online, using a
-      <a href="http://wakari.io">Wakari</a> account.  This will allow you
-      to work with Python entirely in your browser, with commands executed
-      on the cloud, skipping the installation steps outlined below.</p>
-  </div>
-  <div class="box column" id="setup">
-    <h3>Installing Python</h3>
-    <p>The most important piece of software to have is Python.  In this
-      course we will be using <b>Python 2.7.5</b>, though any version
-      2.6.x-2.7.x should work. Python 3.x has slightly different syntax but should work
-      with all of the required packages. 
-      </p>
-    <h4>Packages</h4>
-    <p>In addition to the Python interpreter, a number of scientific packages
-      will be required:</p>
-    <ul>
-      <li>
-<a href="http://www.numpy.org">NumPy</a> version 1.5+:
-	efficient array operations</li>
-      <li>
-<a href="http://www.scipy.org">SciPy</a> version 0.11+:
-	scientific computing tools</li>
-      <li>
-<a href="http://www.matplotlib.org">matplotlib</a> version 1.0+:
-	plotting and visualization</li>
-      <li>
-<a href="http://ipython.org">IPython</a> version 1.0+:
-	interactive computing</li>
-      <li>
-<a href="http://scikit-learn.org">Scikit-learn</a> version 0.12+:
-	machine learning</li>
-      <li>
-<a href="http://astroML.org/">astroML</a>: an astronomical machine learning toolkit</li>
-    </ul>
-    <h4>Installation</h4>
-    <p>For installation from-scratch, I highly recommend the
-      <a href="https://store.continuum.io/cshop/anaconda/">Anaconda Installer</a>, a free product offered by ContinuumIO.  It gives you a fast local Python
-      installation with up-to-date packages.</p>
-<p>
-      </p>
-<ol>
-	<li>Download and install Anaconda on your system, by going to the
-	  above link, downloading the appropriate package. For Mac OSX
-	  you can download the dmg and follow the instructions <a href="http://docs.continuum.io/anaconda/install.html#mac-install">here</a>
-	</li>
-	<li>
-<b>Open a new terminal window</b>, and make sure your $PATH
-	  variable points to the Anaconda installation. You can do this by
-	  typing <pre>[~]$ which python</pre>
-	  The result should show the path to the newly-installed anaconda
-	  folder.  If not, you must modify your $PATH variable to point to
-	  the anaconda directory.
-	</li>
-<li>Update your Anaconda distribution by typing
-	  <pre>[~]$ conda update conda</pre>
-	  Conda is the package management system that comes with anaconda.
-	</li>
-	<li>Update your IPython installation to version 3.0 using
-	  <pre>[~]$ conda update ipython</pre>
-	</li>
-	<li>Check whether your IPython notebook is working correctly: type
-	  <pre>[~] ipython notebook</pre>
-	  and a browser window should open to the notebook dashboard.
-      </li>
-</ol>
-    <p>More detailed system-specific help can be found on the Anaconda
-      <a href="http://docs.continuum.io/anaconda/install.html">
-	installation page</a>.
-    </p>
-<p>Even if you have an existing Python installation, I'd still recommend
-      installing Anaconda for this course.  It will make your life a lot
-      easier.</p>
-  </div>
-
-<div class="box column" id="setup">
-    <h3>Installing astroML</h3>
-    <p> the astroML packages and add-ons can be installed using <i>pip</i>
-         </p>
-<pre>[~]$ pip install astroML</pre>
-	then
-         <pre>[~]$ pip install astroML_addons</pre>
-
-	 the most uptodate code can be downloaded from <a href="http://github.com/astroML/astroML">Githib</a> and by following these <a href="http://www.astroml.org/user_guide/installation.html">instructions</a>
-	   </div>
-
-
-<div class="box column" id="setup">
-    <h3>Installing Git</h3>
-    <p><a href="http://git-scm.com/">Git</a> can be installed rather easily
-      on OSX or linux.  Detailed instructions can be found
-      <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">
-	here</a></p>
-      <h4>Linux</h4>
-      <p>If you are on linux, you can use the package management system, via
-      </p>
-<pre>[~]$ sudo apt-get install git</pre>
-      or
-      <pre>[~]$ yum install git-core</pre>
-      
-
-      <h4>Mac OSX</h4>
-      <p>On Mac OSX, you can either use the Mac installer at
-      </p>
-<pre>http://code.google.com/p/git-osx-installer</pre>
-      or if you use Macports, type
-      <pre>[~]$ sudo port install git-core</pre>
-      
-
-  </div>
-
+  <h3> Registration </h3>
+    <p> There will no registration fee for this meeting. Thats to sponsorship by the STFC and the LSST we will have a workshop dinner on Tuesday the 19th of May at Clare Hall.</p>
 
 </div>
+</div>
+
+<div class="columns">
+  <div class="box column" id="setup">
+  <h3> Accomodation </h3>
+    <p>We have a block of rooms booked the <a href="http://www.arundelhousehotels.co.uk/cambridge/index.php">Arundel House hotel</a>. Double and single rooms are held from 18-21 May.</p>  
+
+<p> Double rooms £145 per room including full English Breakfast </p>
+<p> Single rooms £90 per room incluiding full English Breakfast </p>
+
+<p> Rooms will be held until 18 April 2015</p>
+
+<p> All workshop participants should book directly quoting  reference INST180515 </p>
+
+<p> We have one room held at the Stables and 2 at Gardeners Cottage B&amp;B at the IoA (£30 and £36 per night per person, including breakfast, shared facilities). Please email Adeline Nicol (an426@ast.cam.ac.uk) directly for availablity</p>
+
+</div>
+</div>
+
 </div>
 </section>
 
