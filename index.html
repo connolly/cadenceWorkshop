@@ -23,26 +23,32 @@
 
                   <nav class="main_nav">
     <ul>
-                <li>
+        <li>
             <a title="Homepage" class="button home" href="#home">
                 HOME
             </a>
-        </li>   <li>
+        </li>   
+        <li>
             <a title="Cadence Information" class="button cadence" href="blog/">
                 CADENCE
             </a>
         </li>
-	<li>
+	      <li>
             <a title="Agenda" class="button agenda" href="#agenda">
                 AGENDA
             </a>
         </li>
-	 <li>
+        <li>
+            <a title="Installation" class="button installation" href="#installation">
+                INSTALLATION
+            </a>
+        </li>
+        <li>
             <a title="Logistics" class="button logistics" href="#logistics">
                 LOGISTICS
             </a>
         </li>
-	<li>
+        <li>
             <a title="About" class="button about" href="#about">
                 ABOUT
             </a>
@@ -53,7 +59,7 @@
 <section id="top">
   <a name="home"></a>
   <h1> LSST UK Cadence Workshop</h1>
-<h2>May 18 - May 20th 2015</h2>
+  <h2>May 18 - May 20th 2015</h2>
 </section>
 
 
@@ -81,10 +87,8 @@
     <h2>Agenda</h2>
 
     
-<p> The following is a draft of the schedule; there will likely be
-    modifications depending on how quickly we cover topics in the
-    class, and interest in diving into different machine learning
-    techniques </p>
+<p> The following is a draft of the schedule for the workshop; it will be divided into an introduction to the cadence of the LSST, training
+sessions on how to use the LSST simulation tools, and a series of break out or hack sessions.</p>
 
 <h3>Monday 18th May (Ryle):</h3>
 <ul>
@@ -102,8 +106,7 @@
 <li>11.00 - 12.30pm WG hack sessions (see below)</li>
 <li>12.30 - 1.30pm  Lunch</li>
 <li>1.30 - 3.30pm   WG hack sessions (see below)</li>
-<li>3.30 - 4.00pm   Coffee
-</li>
+<li>3.30 - 4.00pm   Coffee</li>
 <li>4.00 - 5.30pm   WG hack sessions (see below)</li>
 <li>6.30pm    Dinner at Clare Hall </li>
 </ul>  
@@ -115,47 +118,92 @@
 <li>11.00 - 12.30pm WG hack sessions (see below)</li>
 <li>12.30 - 1.30pm  Lunch</li>
 <li>1.30 - 3.30pm   Presentation of cadence results - next steps</li>
-<li>3.30 - 4.00pm   Coffee and end (Please see note re Martin Ryle room below)</li>
+<li>3.30 - 4.00pm   Coffee and end 
+</li>
 </ul>
-  </div>
+</div>
 
 </section>
 
 <section id="lsst-logo"></section>
 
+
+<section class="text">
+  <a name="installation"></a>
+  <div class="block">
+
+<h2>Installation of software for the cadence workshop</h2>
+
+<div class="columns">
+  <h3> Installing the LSST Stack </h3>
+
+<p> Start by installing the necessary parts of the LSST software stack and the LSST-installed anaconda. In these instructions we assume you are installing in ~/lsst, however the install directory can be any place in the file system, including a place visible to all users.  To install in another location, replace ~/lsst with the desired path in the following instructions.  </p>
+
+<code>
+mkdir -p ~/lsst <br>
+
+cd ~/lsst<br>
+
+curl -O https://sw.lsstcorp.org/eupspkg/newinstall.sh<br>
+
+bash newinstall.sh
+</code>
+
+<p>Choose yes when prompted to install Anaconda (the recommended approach).  Choose yes when prompted to install git**.   These packages will not interfere with your system installed versions. This step will download about 1 GB of files to your machine and usually takes less than 15 minutes. </p>
+
+
+<h3>Set up the environment and install the simulations code and data.</h3>
+<p>Source the appropriate shell script and use eups (see here for more info) to install the software and data. </p>
+<code>
+source ~/lsst/loadLSST.csh<br>
+
+eups distrib install lsst_sims -t sims
+</code>
+
+<p>This will install all packages currently in the catalogs simulations framework (CatSim) and metrics analysis framework and all dependencies.  The installation should take on the order of 2 hours, with a final required installation size of 10GB. </p>
+
+<h3>Declare and build the package:</h3>
+
+<code>
+setup sims_maf -t sims
+</code>
+
+</div>
+</div>
+</section>
+
+<section id="mirror"></section>
+
 <section class="text">
   <a name="logistics"></a>
   <div class="block">
 
+
 <h2>Logistics</h2>
 
 <div class="columns">
-  <div class="box column" id="setup">
   <h3> Registration </h3>
-    <p> There will no registration fee for this meeting. Thanks to sponsorship by the STFC and the LSST we will have a workshop dinner on Tuesday the 19th of May at Clare Hall.</p>
+    <p> Thanks to sponsorship from the STSC and the LSST there will be no registration fee for this meeting. We will also be holding a workshop dinner on Tuesday the 19th of May at Clare Hall. Details of the dinner will be sent round later in April.
+    </p>
 
-</div>
 </div>
 
 <div class="columns">
-  <div class="box column" id="setup">
-  <h3> Accomodation </h3>
-    <p>We have a block of rooms booked the <a href="http://www.arundelhousehotels.co.uk/cambridge/index.php">Arundel House hotel</a>. Double and single rooms are held from 18-21 May.</p>  
+   <h3> Accomodation </h3>
+    
+  <p> A block of rooms have been reserved at the <a href="http://www.arundelhousehotels.co.uk/cambridge/index.php">Arundel House hotel</a>. The hotel is a short walk from the Institute of Astronomy and from Cambridge City Center. Single and double rooms are available for the nights of 18-21th of May. This reserved blockof rooms will be held until April 18th 2015 so please book soon. The cost of the rooms is,</p>  
 
 <p> Double rooms £145 per room including full English Breakfast </p>
 <p> Single rooms £90 per room incluiding full English Breakfast </p>
 
-<p> Rooms will be held until 18 April 2015</p>
+<p> All workshop participants should book directly quoting reference INST180515 </p>
 
-<p> All workshop participants should book directly quoting  reference INST180515 </p>
-
-<p> We have one room held at the Stables and 2 at Gardeners Cottage B&amp;B at the IoA (£30 and £36 per night per person, including breakfast, shared facilities). Please email Adeline Nicol (an426@ast.cam.ac.uk) directly for availablity</p>
+<p> We have also reserved one room at the Stables and 2 at Gardeners Cottage B&amp;B at the IoA (£30 and £36 per night per person, including breakfast, shared facilities). Please email <a href="mailto:ajc@ast.cam.ac.uk?Subject=%5BCadenceWorkshop%5D%20accomodation">Andy Connolly</a> directly for availablity</p>
 
 </div>
-</div>
-
 </div>
 </section>
+
 
 
 

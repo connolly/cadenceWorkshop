@@ -73,6 +73,8 @@ section#top h2{
     letter-spacing: 0;
     margin: 1em 0;
     text-align: center;
+    position: relative;
+    top:-50px;
 }
 
 section h2{
@@ -133,6 +135,11 @@ section#ioa{
 section#lsst{
     background-image: url(../images/LSST-site.jpg);
 }
+
+section#mirror{
+    background-image: url(../images/mirror-casting-banner.jpg);
+}
+
 
 section#lsst-logo{
     background-image: url(../images/lsst.jpg);
