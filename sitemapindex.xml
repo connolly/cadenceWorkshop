@@ -5,16 +5,8 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>http://connolly.github.io/cadenceWorkshop/categories/histograms.xml</loc>
-  <lastmod>2015-03-25</lastmod>
- </sitemap>
- <sitemap>
   <loc>http://connolly.github.io/cadenceWorkshop/categories/ipython.xml</loc>
   <lastmod>2015-03-29</lastmod>
- </sitemap>
- <sitemap>
-  <loc>http://connolly.github.io/cadenceWorkshop/categories/machine-learning.xml</loc>
-  <lastmod>2015-03-25</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://connolly.github.io/cadenceWorkshop/categories/nikola.xml</loc>

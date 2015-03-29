@@ -5,20 +5,12 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
-  <loc>http://connolly.github.io/cadenceWorkshop/2014/index.html</loc>
-  <lastmod>2015-03-25</lastmod>
- </url>
- <url>
   <loc>http://connolly.github.io/cadenceWorkshop/2015/index.html</loc>
   <lastmod>2015-03-29</lastmod>
  </url>
  <url>
   <loc>http://connolly.github.io/cadenceWorkshop/archive.html</loc>
   <lastmod>2015-03-29</lastmod>
- </url>
- <url>
-  <loc>http://connolly.github.io/cadenceWorkshop/blog/histograms.html</loc>
-  <lastmod>2015-03-25</lastmod>
  </url>
  <url>
   <loc>http://connolly.github.io/cadenceWorkshop/blog/index.html</loc>
@@ -29,20 +21,12 @@
   <lastmod>2015-03-29</lastmod>
  </url>
  <url>
-  <loc>http://connolly.github.io/cadenceWorkshop/categories/histograms.html</loc>
-  <lastmod>2015-03-25</lastmod>
- </url>
- <url>
   <loc>http://connolly.github.io/cadenceWorkshop/categories/index.html</loc>
   <lastmod>2015-03-29</lastmod>
  </url>
  <url>
   <loc>http://connolly.github.io/cadenceWorkshop/categories/ipython.html</loc>
   <lastmod>2015-03-29</lastmod>
- </url>
- <url>
-  <loc>http://connolly.github.io/cadenceWorkshop/categories/machine-learning.html</loc>
-  <lastmod>2015-03-25</lastmod>
  </url>
  <url>
   <loc>http://connolly.github.io/cadenceWorkshop/categories/nikola.html</loc>
