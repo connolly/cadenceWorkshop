@@ -185,7 +185,7 @@ curl -O https://sw.lsstcorp.org/eupspkg/newinstall.sh<br>
 bash newinstall.sh
 </code>
 
-<p>Choose yes when prompted to install Anaconda (the recommended approach).  Choose yes when prompted to install git**.   These packages will not interfere with your system installed versions. This step will download about 1 GB of files to your machine and usually takes less than 15 minutes. </p>
+<p>Choose yes when prompted to install Anaconda (the recommended approach).   These packages will not interfere with your system installed versions. This step will download about 1 GB of files to your machine and usually takes less than 15 minutes. </p>
 
 
 <h3>Set up the environment and install the simulations code and data.</h3>
@@ -193,17 +193,21 @@ bash newinstall.sh
 <code>
 source ~/lsst/loadLSST.csh<br>
 
-eups distrib install lsst_sims -t sims
+eups distrib install sims_maf -t sims
 </code>
 
-<p>This will install all packages currently in the catalogs simulations framework (CatSim) and metrics analysis framework and all dependencies.  The installation should take on the order of 2 hours, with a final required installation size of 10GB. </p>
+<p>This will install all packages required to analyze the LSST simulated cadences and their dependencies.  The installation should take on the order of 2 hours, with a final required installation size of 10GB. </p>
 
-<h3>Declare and build the package:</h3>
+<h3>Set up the packages:</h3>
 
 <code>
 setup sims_maf -t sims
 </code>
 
+
+<p> If you run into difficulties or want more details check out the <a href="https://confluence.lsstcorp.org/display/SIM/Catalogs+and+MAF">LSST simulation confluence pages</a>
+
+</p>
 </div>
 </div>
 </section>
@@ -218,7 +222,7 @@ setup sims_maf -t sims
 <h2>Registration</h2>
 
 <div class="columns">
-    <p> Thanks to sponsorship from the STSC and the LSST there will be no registration fee for this meeting. We will also be holding a workshop dinner on Tuesday the 19th of May at Clare Hall. Details of the dinner will be sent round later in April.
+    <p> Thanks to sponsorship from the University of Cambridge, STFC and the LSST there will be no registration fee for this meeting. We will also be holding a workshop dinner on Tuesday the 19th of May at Clare Hall. Details of the dinner will be sent round later in April.
     </p>
 
   <p> To sign up for the workshop (please note space will be limited) please fill in the following form</p>
