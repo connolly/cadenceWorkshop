@@ -217,10 +217,46 @@ eups distrib install sims_maf -t sims
 
 <h3>Set up the packages:</h3>
 
+<p> In the terminal and directory you will run the ipython notebook from </p>
+
 <code>
 setup sims_maf -t sims
 </code>
 
+<h3> Download a simulated LSST survey and ipython notebook </h3>
+
+
+<p> Download a simulated survey <a href="http://ops2.tuc.noao.edu/runs/enigma_1189/data/enigma_1189_sqlite.db.gz">Enigma_1189</a> into the the directory you will run the ipython code (NOTE this is 2GB in size and will take a little time).</p>
+<p>
+
+<code>
+gunzip enigma_1189.db.gz
+</code>
+
+</p>
+<p> Download an ipython <a href="https://www.dropbox.com/s/759389m02y8emri/IntroductionNotebook.ipynb">notebook</a>. Note you do not need to signup for Dropbox just kill the initial window that requests you to sign in.</p>
+<p>
+
+
+
+</p>
+<h3> Run the notebook to test the simulations analysis code</h3>
+
+<p> In the directory and terminal where enigma_1189.db and IntroductionNotebook.ipynb reside </p>
+<p>
+
+<code>
+ipython notebook  IntroductionNotebook.ipynb
+</code>
+
+</p>
+<p> This should start a notebook in your browser. To execute each cell in the notebook just shift click. For an introduction to iPython notebooks see <a href="http://ipython.org/notebook.html">here</a></p>
+
+<h3> Download the rest of the ipython notebooks</h3>
+
+<code>
+git clone https://github.com/lsst-sims/sims_maf_notebooks.git
+</code>
 
 <p> If you run into difficulties or want more details check out the <a href="https://confluence.lsstcorp.org/display/SIM/Catalogs+and+MAF">LSST simulation confluence pages</a>
 
@@ -228,7 +264,7 @@ setup sims_maf -t sims
 </div>
 </div>
 </section>
-
+<!----
 <section id="mirror"></section>
 
 <section class="text">
@@ -250,6 +286,7 @@ setup sims_maf -t sims
 </div>
 </div>
 </section>
+--->
 
 <section class="text">
   <a name="accomodation"></a>
